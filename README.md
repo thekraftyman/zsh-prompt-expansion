@@ -1,6 +1,6 @@
 # ZSH Prompt Expansion
 
-This is a copy of the guide found here: (https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Shell-state)[https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Shell-state]
+This is a copy of the guide found here: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Shell-state
 
 ## Expansion of Prompt Sequences
 
