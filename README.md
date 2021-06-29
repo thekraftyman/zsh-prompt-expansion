@@ -88,7 +88,7 @@ This is a copy of the guide found here: https://zsh.sourceforge.io/Doc/Release/P
 |--------|--------|
 | `%v` | The value of the first element of the `psvar` array parameter. Following the ‘`%`’ with an integer gives that element of the array. Negative integers count from the end of the array. |
 | `%(x.true-text.false-text)` | Shown below |
-| `%<string<` `%>string>` `%[xstring]` | Shown below |
+| `%<string<`  `%>string>`  `%[xstring]` | Shown below |
 
 #### `%(x.true-text.false-text)`
 > Specifies a ternary expression. The character following the _x_ is arbitrary; the same character is used to separate the text for the ‘true’ result from that for the ‘false’ result. This separator may not appear in the _true-text_, except as part of a %-escape sequence. A ‘`)`’ may appear in the _false-text_ as ‘`%)`’. _true-text_ and _false-text_ may both contain arbitrarily-nested escape sequences, including further ternary expressions.
