@@ -54,7 +54,7 @@
 #### `%D{string}`
 
 > _string_ is formatted using the `strftime` function. See man page strftime(3) for more details. Various zsh extensions provide numbers with no leading zero or space if the number is a single digit:
-> | string | output |
+> | Input | Output |
 > |-|-|
 > | `%f` | a day of the month |
 > | `%K` | the hour of the day on the 24-hour clock |
@@ -71,13 +71,13 @@
 
 | Input | Output |
 |--------|--------|
-| %B ($b) | Start (stop) boldface mode. |
-| %E | Clear to end of line. |
-| %U (%u) | Start (stop) underline mode. |
-| %S (%s) | Start (stop) standout mode. |
-| %F (%f) | Start (stop) using a different foreground colour, if supported by the terminal. The colour may be specified two ways: either as a numeric argument, as normal, or by a sequence in braces following the `%F`, for example `%F{red}`. In the latter case the values allowed are as described for the `fg zle_highlight` attribute; Character Highlighting. This means that numeric colours are allowed in the second format also. |
-| %K (%k) | Start (stop) using a different bacKground colour. The syntax is identical to that for `%F` and `%f`. |
-| %{...%} | Include a string as a literal escape sequence. The string within the braces should not change the cursor position. Brace pairs can nest.  A positive numeric argument between the `%` and the `{` is treated as described for `%G` below. |
-| %G | Within a `%{...%}` sequence, include a ‘glitch’: that is, assume that a single character width will be output. This is useful when outputting characters that otherwise cannot be correctly handled by the shell, such as the alternate character set on some terminals. The characters in question can be included within a `%{...%}` sequence together with the appropriate number of `%G` sequences to indicate the correct width. An integer between the ‘`%`’ and ‘`G`’ indicates a character width other than one. Hence `%{seq%2G%}` outputs _seq_ and assumes it takes up the width of two standard characters.  Multiple uses of `%G` accumulate in the obvious fashion; the position of the `%G` is unimportant. Negative integers are not handled.  Note that when prompt truncation is in use it is advisable to divide up output into single characters within each `%{...%}` group so that the correct truncation point can be found. |
+| `%B` (`%b`) | Start (stop) boldface mode. |
+| `%E` | Clear to end of line. |
+| `%U` (`%u`) | Start (stop) underline mode. |
+| `%S` (`%s`) | Start (stop) standout mode. |
+| `%F` (`%f`) | Start (stop) using a different foreground colour, if supported by the terminal. The colour may be specified two ways: either as a numeric argument, as normal, or by a sequence in braces following the `%F`, for example `%F{red}`. In the latter case the values allowed are as described for the `fg zle_highlight` attribute; Character Highlighting. This means that numeric colours are allowed in the second format also. |
+| `%K` (`%k`) | Start (stop) using a different bacKground colour. The syntax is identical to that for `%F` and `%f`. |
+| `%{...%}` | Include a string as a literal escape sequence. The string within the braces should not change the cursor position. Brace pairs can nest.  A positive numeric argument between the `%` and the `{` is treated as described for `%G` below. |
+| `%G` | Within a `%{...%}` sequence, include a ‘glitch’: that is, assume that a single character width will be output. This is useful when outputting characters that otherwise cannot be correctly handled by the shell, such as the alternate character set on some terminals. The characters in question can be included within a `%{...%}` sequence together with the appropriate number of `%G` sequences to indicate the correct width. An integer between the ‘`%`’ and ‘`G`’ indicates a character width other than one. Hence `%{seq%2G%}` outputs _seq_ and assumes it takes up the width of two standard characters.  Multiple uses of `%G` accumulate in the obvious fashion; the position of the `%G` is unimportant. Negative integers are not handled.  Note that when prompt truncation is in use it is advisable to divide up output into single characters within each `%{...%}` group so that the correct truncation point can be found. |
 
 ## Conditional Substrings in Prompts
