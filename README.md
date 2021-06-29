@@ -4,14 +4,14 @@
 
 ### Special Characters
 
-| Import | Output |
+| Input | Output |
 |--------|--------|
 | `%%`   | `%`    |
 | `%)`   | `)`    |
 
 ### Login Information
 
-| Import | Output |
+| Input | Output |
 |--------|--------|
 | `%l` | The line (tty) the user is logged in on, without ‘`/dev/`’ prefix. If the name starts with ‘`/dev/tty`’, that prefix is stripped. |
 | `%M` | The full machine hostname. |
@@ -21,7 +21,7 @@
 
 ### Shell State
 
-| Import | Output |
+| Input | Output |
 |--------|--------|
 | `%#` | A ‘`#`’ if the shell is running with privileges, a ‘`%`’ if not. Equivalent to ‘`%(!.#.%%)`’. The definition of ‘privileged’, for these purposes, is that either the effective user `ID` is zero, or, if `POSIX.1e` capabilities are supported, that at least one capability is raised in either the Effective or Inheritable capability vectors. |
 | `%?` | The return status of the last command executed just before the prompt. |
@@ -41,7 +41,7 @@
 
 ### Date and Time
 
-| Import | Output |
+| Input | Output |
 |--------|--------|
 | `%D` | The date in _yy-mm-dd_ format. |
 | `%T` | Current time of day, in 24-hour format. |
@@ -51,7 +51,7 @@
 | `%W` | The date in _mm/dd/yy_ format. |
 | `%D{string}` | shown below |
 
-#### `%D`{_string_}
+#### `%D{string}`
 
 > _string_ is formatted using the `strftime` function. See man page strftime(3) for more details. Various zsh extensions provide numbers with no leading zero or space if the number is a single digit:
 > | string | output |
@@ -69,7 +69,7 @@
 
 ### Visual Effects
 
-| Import | Output |
+| Input | Output |
 |--------|--------|
 | %B ($b) | Start (stop) boldface mode. |
 | %E | Clear to end of line. |
